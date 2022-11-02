@@ -1,17 +1,42 @@
 <template>
-    <div class="container_header">
+    <header class="container_header">
         <h1 class="title_header">BOOLPRESS</h1>
         <ul class="menu_link">
-            <li>
-                <a href="/admin">Area Riservata</a>
+            <li v-for="(link,i) in links" :key="i">
+                <router-link :to="link.path">{{ link.word }}</router-link>
             </li>
+            
         </ul>
-    </div>
+    </header>
     
 </template>
 
 <script>
     export default {
+        data() {
+            return {
+                links: [
+                {
+                    word: 'Home',
+                    path: '/'
+                },
+                {
+                    word: 'Posts',
+                    path: '/blog'
+                },
+                {
+                    word: 'Chi Siamo',
+                    path: '/chi-siamo'
+                },
+                {
+                    word: 'Contatti',
+                    path: '/contatti'
+                }
+
+                ]
+                
+            }
+        }
         
     }
 </script>
@@ -34,6 +59,8 @@
 }
 
 .menu_link {
+    display: flex;
+    gap: 4rem;
     color: whitesmoke;
     font-size: 1.25rem;
 }
