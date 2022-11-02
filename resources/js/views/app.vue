@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="wrapper">
         <NavBar/>
         <router-view></router-view>
     </div>
@@ -7,9 +7,7 @@
 
 <script>
 
-import NavBar from '../components/NavBar.vue';
-    
-    
+import NavBar from '../components/NavBar.vue';    
 
     export default {
         components: {
@@ -22,6 +20,5 @@ import NavBar from '../components/NavBar.vue';
 </script>
 
 <style lang="scss" scoped>
-
 
 </style>
