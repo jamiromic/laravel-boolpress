@@ -43,7 +43,8 @@
                     this.post = post
                 
                 }).catch(err => {
-                    console.log(err)
+                   
+                    this.$router.replace({ name: '404'})
                 })
             }        
         },

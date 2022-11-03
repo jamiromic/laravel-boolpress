@@ -3,6 +3,7 @@ import ContactUs from '../pages/ContactUs.vue';
 import AboutUs from '../pages/AboutUs.vue';
 import PostsIndex from '../pages/Posts.index.vue';
 import PostsShow from '../pages/Posts.show.vue';
+import Err404 from '../pages/404.vue';
 
 
 const routes = [
@@ -40,7 +41,14 @@ const routes = [
         component: PostsShow,
         props: true
 
-    }
+    },
+
+    {
+        path: '/*',
+        name: 'err404',
+        component: Err404,
+
+    },
     
 ];
 
